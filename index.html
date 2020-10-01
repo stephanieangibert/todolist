@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Assistant&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+   
+    <h1>Ma toDoList</h1>
+    <div class="container">
+    <section class="sectionHaut">
+<div class="Urgence">
+    <h2>Urgences du jour</h2>
+    <div class="paraUrgence">
+        <ul class="ul1"></ul>
+    </div>
+    <form class="ur" action="">     
+        <input class="inputUrgence"type="text" id='item' placeholder="Entrez une action">
+        <button class="primary" type="submit">Ok</button>
+    </form>
+</div>
+<div class="tacheQuotidienne">
+    <h2>Tâches Quotidiennes</h2>
+    <div class="paraUrgence"></div>
+    <form class="tq" action="">     
+        <input type="text" id='item' placeholder="Entrez une action">
+        <button class="primary" type="submit">Ok</button>
+    </form>
+</div>
+<div class="tacheHebdomaire">
+    <h2>Tâches hebdomadaires</h2>
+    <div class="paraUrgence"></div>
+    <form class="th"action="">     
+        <input type="text" id='item' placeholder="Entrez une action">
+        <button class="primary" type="submit">Ok</button>
+    </form>
+</div>
+    </section>
+    <section class="sectionBas">
+<div class="containerBas">
+<div class="gauche">
+<h2>A voir</h2>
+<p class="cb"></p>
+</div>
+<div class="date">
+    <div class="formatDate">
+        <div class="jourSemaine">fffh</div>
+        <div class="numeroMois"></div>
+        <div class="mois12"></div>
+    </div>
+</div>
+</div>
+    </section>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
