@@ -9,6 +9,19 @@ body{
     background: -webkit-linear-gradient(to left, #ACBB78, #799F0C);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to left, #ACBB78, #799F0C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+header{   
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+    width: 100%;
+}
+.hamburger{
+    width: 50px;
+    height: 129px;
+   font-size: 260%;
+   cursor: pointer;
+}
 .container{
     width: 100%;
   display: flex;
@@ -54,6 +67,8 @@ h1{
     font-family: 'Abril Fatface', cursive;
     letter-spacing: 2px;
     font-size: 62px;
+    width: 1570px;
+  
 }
 h2{
     font-family: 'Abril Fatface', cursive;
@@ -98,13 +113,18 @@ form{
 .ur input{
     width: 442px;
     height: 40px;
-    border:solid 3px red;
+border-radius: 5px;
 }
 .tq input{
     width: 311px;
     height: 40px;
-    border:solid 3px red;
+    border-radius: 5px;
 
+}
+.th input{
+    width: 311px;
+    height: 40px;
+    border-radius: 5px;
 }
 .tq button{
     left: 79%;
@@ -115,8 +135,7 @@ form{
 .th input{
     width: 311px;
     height: 40px;
-    border:solid 3px red;
-
+    border-radius: 5px;
 }
 .primary{
     width: 80px;
