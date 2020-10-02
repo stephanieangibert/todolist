@@ -70,6 +70,7 @@ date2.textContent=mois;
 let form1=document.querySelector(".ur");
 let input1=document.querySelector(".inputUrgence");
 let ul1=document.querySelector(".ul1");
+let toutesLesTaches=[];
 
 form1.addEventListener("submit",e=>{
     e.preventDefault();
@@ -97,7 +98,26 @@ function rajouterDuTexte(text){
     const txt=document.createElement("span");
     item.appendChild(txt);
     txt.innerHTML=toDo.text;
+
+    const btn=document.createElement("button");
+    item.appendChild(btn);
+     const img=document.createElement("img");
+     btn.appendChild(img);
+   
+   img.setAttribute("src","ressources/fermer.svg");
+    item.appendChild(btn);
     
+    toutesLesTaches.push(item);
+    console.log(toutesLesTaches);
+    btn.addEventListener('click', (e)=>{
+     toutesLesTaches.forEach(elt=>{
+         if(e.target.parentNode.getAttribute("data-key")===elt.getAttribute("data-key")){
+             elt.remove();
+             toutesLesTaches = toutesLesTaches.filter(li => li.dataset.key !== elt.dataset.key);
+         }
+     })
+      
+    })
     
 }
 function tacheFaite(e){
