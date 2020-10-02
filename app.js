@@ -72,6 +72,7 @@ let input1=document.querySelector(".inputUrgence");
 let ul1=document.querySelector(".ul1");
 let toutesLesTaches=[];
 
+
 form1.addEventListener("submit",e=>{
     e.preventDefault();
     const text=input1.value.trim();
@@ -90,15 +91,12 @@ function rajouterDuTexte(text){
     const item=document.createElement("li");
     item.appendChild(input);
     input.innerHTML=text;
-    input.addEventListener('click',tacheFaite);
-    
- 
+    input.addEventListener('click',tacheFaite); 
     ul1.appendChild(item);
     item.setAttribute("data-key",toDo.id);
     const txt=document.createElement("span");
     item.appendChild(txt);
     txt.innerHTML=toDo.text;
-
     const btn=document.createElement("button");
     item.appendChild(btn);
      const img=document.createElement("img");
@@ -110,10 +108,12 @@ function rajouterDuTexte(text){
     toutesLesTaches.push(item);
     console.log(toutesLesTaches);
     btn.addEventListener('click', (e)=>{
+      
      toutesLesTaches.forEach(elt=>{
-         if(e.target.parentNode.getAttribute("data-key")===elt.getAttribute("data-key")){
+         console.log(item.getAttribute("data-key"));
+         if(item.getAttribute("data-key")===elt.getAttribute("data-key")){
              elt.remove();
-             toutesLesTaches = toutesLesTaches.filter(li => li.dataset.key !== elt.dataset.key);
+              toutesLesTaches = toutesLesTaches.filter(li => li.dataset.key !== elt.dataset.key);
          }
      })
       
