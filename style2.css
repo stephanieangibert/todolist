@@ -15,8 +15,14 @@ section{
     background-color:#d88524 ;
     font-family: 'Abril Fatface', cursive;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;  
+}
+h1{
+    letter-spacing: 3px;
+    font-size: 62px;
+    width: 100%;
 }
 .container{
     position: relative;
@@ -69,7 +75,8 @@ section{
     transition: 0.5s;
     pointer-events: none;
 }
-.container .inputBox input:focus~span{
+.container .inputBox input:focus~span,
+.container .inputBox input:valid~span{
     transform: translateX(-10px) translateY(-32px);
     font-size: 12px;
 }
@@ -92,14 +99,19 @@ section{
     left: 0;
     width: 60px;
     height: 60px;
-    background: black;
+    background: #d88524;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 2em;
-    color:#fff;
+    color:black;
     z-index: 1000;    
+}
+.Bis{
+    background: black; 
+    color:white;
+    transition: 0.5s ease-in-out;
 }
 .navigation{
     position: fixed;
@@ -107,7 +119,7 @@ section{
     right:calc(100% - 60px); 
     width: 50%;
     height: 100%;
-    background: #fff;
+    background: #d88524;
     z-index: 999;
     display: flex;
     flex-direction: column;
@@ -118,6 +130,8 @@ section{
 .navigation.active{
    right:68%;
    background-color: black;
+   box-shadow: 90px 0 100px black;
+   transition: 1s ease-in-out;
 }
 .haut{
     width: 50%;
@@ -162,4 +176,63 @@ ul li a{
 }
 .sign:nth-child(2){
     padding-bottom: 30px;
+}
+.effetScale{
+    animation: disparition 1s forwards;
+}
+@keyframes disparition{
+    0%{
+       transform: scale(1);
+    }
+    25%{
+        transform: scale(0.75);
+        transition: 0.25s;
+    }
+    50%{
+        transform: scale(0.5);
+        transition: 0.25s;
+    }
+    75%{
+        transform: scale(0.25);
+        transition: 0.25s;
+    }
+    100%{
+        transform: scale(0);
+        transition: 0.25s;
+    }
+}
+#pseudo{
+    
+    position: absolute;
+   top:50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   color:black;
+   font-size: 200%;
+}
+.apparition{
+    animation:2s forwards bienvenue;
+    font-family: 'Abril Fatface', cursive;
+}
+@keyframes bienvenue{
+     0%{
+        transform: scale(0);
+        transition: 0.15s;
+     }
+     25%{
+        transform: scale(0.25);
+        transition: 0.15s;
+     }
+     50%{
+        transform: scale(0.5);
+        transition: 0.15s;
+     }
+     75%{
+        transform: scale(0.75);
+        transition: 0.15s;
+     }
+     100%{
+        transform: scale(2);
+        transition: 0.15s;
+     }
 }
