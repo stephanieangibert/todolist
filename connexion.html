@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <header>     
+        <h1>Ma toDoList 🌻</h1>
+    </header>
+    <div class="container" id="contact">
+        <div class="encart" id="encart">
+            <div class="encartTop">
+        <h2>Inscription</h2>
+    </div>
+        <form action="">
+            <div class="inputBox">
+                <input type="text" required="required" placeholder="Pseudo">                
+            </div>
+            <div class="inputBox">
+                 <!-- <input type="password" required="required" placeholder="Mot de passe">
+                <input type="checkbox" id="show_password"> -->
+                <input type="password" onmousedown="this.type='text'" onmouseup="this.type='password'"
+       onmousemove="this.type='password'" placeholder="Mot de passe">
+               
+            </div>
+            <div class="inputBox">
+                <input type="submit" value="Envoyer" class="vert">
+            </div>
+    </form>
+  
+</div>
+    </div>
+    <div id="connexion"></div>
+    <script src="connexion.js"></script>
+</body>
+</html>
